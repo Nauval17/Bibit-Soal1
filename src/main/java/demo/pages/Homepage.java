@@ -17,4 +17,9 @@ public class Homepage implements HomepageLocator {
     public boolean topMenu(){
         return pageObject.checkIfDisplayed(TOP_MENU);
     }
+
+    public void clickLoginButton(){
+        pageObject.waitUntilEnabled(HOME_LOGIN);
+        pageObject.clickOn(HOME_LOGIN);
+    }
 }

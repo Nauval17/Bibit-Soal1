@@ -44,6 +44,10 @@ public class WebPageObject {
         return element.isDisplayed();
     }
 
+    public boolean checkIfEnabled(By id){
+        WebElement element = webDriver.findElement(id);
+        return element.isEnabled();
+    }
     public String checkToast(By id) {
         WebElement toast = webDriver.findElement(id);
         return toast.getAttribute("name");
