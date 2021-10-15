@@ -9,5 +9,7 @@ public interface LoginpageLocator {
     By LOGIN_BUTTON =By.id("loginbutton");
     By LOGIN_VIA_FACEBOOK = By.xpath("//a[contains(text(),'Facebook')]");
     By LOGIN_VIA_GOOGLE = By.xpath("//div/input[@type='button']");
-    By WARNING_MESSAGE = By.xpath("//span[contains(text(),'salah')]");
+    By WARNING_MESSAGE = By.xpath("//div[@class='sysmsg-content']/div");
+    By SKIP_BUTTON = By.xpath("(//div[@class='ant-modal-content']//button)[1]");
+    By DASHBOARD_LOGO = By.xpath("//div[@id='header-logo']");
 }

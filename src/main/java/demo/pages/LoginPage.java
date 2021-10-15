@@ -14,7 +14,7 @@ public class LoginPage implements LoginpageLocator {
         pageObject.typeOn(INPUT_USERNAME,username);
     }
 
-    public void inputPassword(String password){
+    public void inputPassword(String password) {
         pageObject.typeOn(INPUT_PASSWORD,password);
     }
 
@@ -22,7 +22,16 @@ public class LoginPage implements LoginpageLocator {
         pageObject.clickOn(LOGIN_BUTTON);
     }
 
-//    public boolean isOnDashboard(){
-//        return pageObject.waitUntilDisplayed();
-//    }
+    public void skipAvatar(){
+        pageObject.waitUntilEnabled(SKIP_BUTTON);
+        pageObject.clickOn(SKIP_BUTTON);
+    }
+
+    public boolean isOnDashboard(){
+        return pageObject.waitUntilDisplayed(DASHBOARD_LOGO);
+    }
+
+    public boolean warningMessage(){
+        return pageObject.waitUntilDisplayed(WARNING_MESSAGE);
+    }
 }
